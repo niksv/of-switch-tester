@@ -66,7 +66,7 @@ def main(config=None):
         logging.basicConfig(
             format='%(asctime)s.%(msecs)s:%(name)s:%(thread)d:'
                    '%(levelname)s:%(process)d:%(message)s',
-            level=logging.INFO
+            level=logging.DEBUG
         )
         config = get_args()
     scenarios = get_scenarios(config)

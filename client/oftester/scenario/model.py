@@ -214,7 +214,7 @@ class Scenario:
                    }
         response = requests.post(url, headers=HTTP_HEADERS, json=payload)
         response.raise_for_status()
-
+        logging.debug('Response was:\n %s', response.json())
         dps = sorted(response.json()[0]['dps'].items())
         if len(dps) < 2:
             logging.error(
